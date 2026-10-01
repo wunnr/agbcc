@@ -457,3 +457,6 @@ extern int flag_fixed_debug_line_info;
 
 /* Nonzero if prologue bug should be fixed.  */
 extern int flag_prologue_bugfix;
+
+/* Nonzero if dwarf bug should be fixed.  */
+extern int flag_dwarf_bugfix;
