@@ -591,6 +591,9 @@ int flag_fixed_debug_line_info = 0;
 /* Fix prologue bug in new compiler.  */
 int flag_prologue_bugfix = 0;
 
+/* Output standard-compliant dwarf .debug_abbrev section.  */
+int flag_dwarf_bugfix = 0;
+
 typedef struct
 {
     char *string;
@@ -732,6 +735,8 @@ lang_independent_options f_options[] =
      "Use hex instead of decimal in assembly output"},
     {"fix-debug-line", &flag_fixed_debug_line_info, 1,
      "Generate fixed DWARF line info"},
+    {"dwarf-bugfix", &flag_dwarf_bugfix, 1,
+     "Output standard-compliant dwarf .debug_abbrev section"},
 #ifndef OLD_COMPILER
     /* This flag fixes a bug in the newer agbcc version that causes `lr` to be
        saved onto the stack in functions where it is not necessary. This is

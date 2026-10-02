@@ -21,6 +21,16 @@ mv gcc/agbcc .
 rm -f gcc_arm/config.status gcc_arm/config.cache
 cd gcc_arm && ./configure --target=arm-elf --host=i386-linux-gnu && make cc1 && cd ..
 mv gcc_arm/cc1 agbcc_arm
+# c++ compiler
+rm -f g++/config.status g++/config.cache
+cd g++ && ./configure --target=thumb-elf --disable-werror --with-cpu=arm7tdmi --with-no-thumb-interwork --disable-multilib --enable-languages="c++" --host=i686-pc-linux --build=i686-pc-linux
+make clean && make cc1plus && cd ..
+mv g++/cc1plus agbcp
+rm -f g++_arm/config.status g++_arm/config.cache
+cd g++_arm && ./configure --target=arm-elf --disable-werror --with-cpu=arm7tdmi --with-no-thumb-interwork --disable-multilib --enable-languages="c++" --host=i686-pc-linux --build=i686-pc-linux
+make clean && make cc1plus && cd ..
+mv g++_arm/cc1plus agbcp_arm
+# runtime
 make -C libgcc clean
 make -C libgcc $CCOPT $CXXOPT
 mv libgcc/libgcc.a .
