@@ -66,7 +66,7 @@ jobs:
 
       - name: Create release archive
         shell: bash
-        run: tar -C TEMPDIR/tools/agbcc -czf agbcc-mac-arm64.tar.gz bin include lib
+        run: tar -C TEMPDIRMAC/tools/agbcc -czf agbcc-mac-arm64.tar.gz bin include lib
 
       - name: Upload archive
         uses: actions/upload-artifact@main
