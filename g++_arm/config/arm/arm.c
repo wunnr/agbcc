@@ -38,6 +38,7 @@ Boston, MA 02111-1307, USA.  */
 #include "tree.h"
 #include "expr.h"
 #include "toplev.h"
+#include "recog.h"
 
 /* The maximum number of insns skipped which will be conditionalised if
    possible.  */

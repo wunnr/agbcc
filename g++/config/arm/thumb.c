@@ -31,9 +31,12 @@ Boston, MA 02111-1307, USA.  */
 #include "output.h"
 #include "insn-flags.h"
 #include "insn-attr.h"
+#include "insn-config.h"
 #include "flags.h"
 #include "tree.h"
 #include "expr.h"
+#include "toplev.h"
+#include "recog.h"
 
 
 int current_function_anonymous_args = 0;

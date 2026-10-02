@@ -1458,6 +1458,9 @@ extern int gcse_main			PROTO ((rtx, FILE *));
 /* END CYGNUS LOCAL */
 #endif
 
+extern void delete_null_pointer_checks PARAMS ((rtx));
+extern void merge_blocks PARAMS ((rtx));
+
 /* In global.c */
 extern void mark_elimination		PROTO ((int, int));
 #ifdef BUFSIZ

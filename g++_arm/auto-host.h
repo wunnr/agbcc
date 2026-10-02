@@ -4,7 +4,7 @@
 #define STRING_WITH_STRINGS 1
 
 /* Define if printf supports "%p".  */
-#define HAVE_PRINTF_PTR 1
+/* #undef HAVE_PRINTF_PTR */
 
 /* Define if you want expensive run-time checks. */
 /* #undef ENABLE_CHECKING */
@@ -112,7 +112,7 @@
 /* #undef pid_t */
 
 /* Define if you have the ANSI C header files.  */
-#define STDC_HEADERS 1
+/* #undef STDC_HEADERS */
 
 /* Define if `sys_siglist' is declared by <signal.h>.  */
 #define SYS_SIGLIST_DECLARED 1
@@ -121,7 +121,7 @@
 #define TIME_WITH_SYS_TIME 1
 
 /* Define vfork as fork if vfork does not work.  */
-/* #undef vfork */
+#define vfork fork
 
 /* Define if you have the atoll function.  */
 #define HAVE_ATOLL 1
@@ -142,10 +142,10 @@
 #define HAVE_BZERO 1
 
 /* Define if you have the fputc_unlocked function.  */
-#define HAVE_FPUTC_UNLOCKED 1
+/* #undef HAVE_FPUTC_UNLOCKED */
 
 /* Define if you have the fputs_unlocked function.  */
-#define HAVE_FPUTS_UNLOCKED 1
+/* #undef HAVE_FPUTS_UNLOCKED */
 
 /* Define if you have the getrlimit function.  */
 #define HAVE_GETRLIMIT 1

@@ -1188,6 +1188,13 @@ int thumb_shiftable_const ();
    limited PC addressing range: */
 #define MACHINE_DEPENDENT_REORG(INSN) thumb_reorg ((INSN))
 
+#include <stdio.h>
+
+enum machine_mode;
+
+struct rtx_def;
+typedef struct rtx_def *rtx;
+
 
 /* Options specific to Thumb */
 
@@ -1195,10 +1202,26 @@ int thumb_shiftable_const ();
 int thumb_trivial_epilogue ();
 #define USE_RETURN (reload_completed && thumb_trivial_epilogue ())
 
-extern char * thumb_unexpanded_epilogue ();
-extern char * output_move_mem_multiple ();
-extern char * thumb_load_double_from_address ();
 extern char * output_return ();
 extern int    far_jump_used_p();
 extern int    is_called_in_ARM_mode ();
+extern int thumb_cmp_operand();
+extern void thumb_reorg();
+extern void thumb_expand_movstrqi();
+extern void thumb_reload_out_si();
+extern void final_prescan_insn();
+extern int far_jump_used_p();
+extern void thumb_function_prologue();
+extern void thumb_expand_prologue();
+extern void thumb_function_epilogue();
+extern void thumb_expand_epilogue();
+extern char *thumb_unexpanded_epilogue();
+extern char *thumb_load_double_from_address();
+extern char *output_move_mem_multiple();
+extern void thumb_print_operand();
+extern int thumb_return_in_memory();
+extern void thumb_override_options();
+extern int arm_valid_machine_decl_attribute();
+extern int s_register_operand();
+extern int is_called_in_ARM_mode ();
 

@@ -2215,4 +2215,11 @@ int ok_integer_or_other ();
 /* END CYGNUS LOCAL */
 int s_register_operand (/* register rtx op, enum machine_mode mode */);
 
+void arm_asm_output_label (/*FILE *, char **/);
+void arm_increase_location PARAMS ((int));
+int short_branch PARAMS ((int, int));
+int arm_insn_not_targeted (/* rtx */);
+int arm_backwards_branch PARAMS ((int, int));
+int arm_debugger_arg_offset PARAMS ((int, struct rtx_def *));
+
 #endif /* __ARM_H__ */

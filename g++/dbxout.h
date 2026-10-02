@@ -31,3 +31,4 @@ extern void dbxout_syms			PROTO ((tree));
 extern void dbxout_function		PROTO ((tree));
 extern void dbxout_source_line		PROTO ((FILE *, char*, int));
 extern void dbxout_begin_function	PROTO ((tree));
+extern void dbxout_live_range		PROTO ((int));
