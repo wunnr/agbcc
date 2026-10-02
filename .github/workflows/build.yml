@@ -4,6 +4,7 @@ on:
   push:
     branches: [ master ]
   pull_request:
+  workflow_dispatch:
 
 # Note, Github Actions is dumb and only steps - not jobs - can access env.
 # Therefore, if you update this, make sure to update the deploy job below.
